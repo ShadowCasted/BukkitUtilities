@@ -105,7 +105,7 @@ public abstract class ShadowCommand{
 
 	public static String[] getArguments(){
 		if(getEvent().getMessage().contains(" ")){ //if no args
-			String temp = getEvent().getMessage().replaceFirst(getEvent().getMessage().split(" ")[0], "");
+			String temp = getEvent().getMessage().replaceFirst("/"+getCommand()+" ", "");
 			if(!temp.contains(" ")){return new String[]{temp};}
 			else{return temp.split(" ");}
 		}
